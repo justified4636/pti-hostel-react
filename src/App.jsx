@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState } from 'react'
 import { useAuth } from './context/AuthContext'
 import { DataProvider, useData } from './context/DataContext'
 import LoginPage from './components/LoginPage'
@@ -12,6 +12,8 @@ import StudentProfile from './components/StudentProfile'
 import AdminPanel from './components/AdminPanel'
 import RealtimeListener from './components/RealtimeListener'
 import ErrorBoundary from './components/ErrorBoundary'
+
+const LOGO_URL = '/pti-logo.png'
 
 function AppContent() {
   const { user, profile, loading } = useAuth()
@@ -35,12 +37,12 @@ function AppContent() {
   }
 
   if (loading) return null
-  if (!user) return <LoginPage />
+  if (!user) return <LoginPage logoUrl={LOGO_URL} />
 
   return (
     <div className="app-shell">
       <RealtimeListener onRefresh={refreshAll} />
-      <Topbar />
+      <Topbar logoUrl={LOGO_URL} />
       <div className="main">
         {activeTab !== 'profile' && <StatsRow />}
         {activeTab !== 'profile' && (

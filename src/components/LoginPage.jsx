@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useAuth } from '../context/AuthContext'
 
-export default function LoginPage() {
+export default function LoginPage({ logoUrl }) {
   const { login } = useAuth()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -26,11 +26,15 @@ export default function LoginPage() {
       <div className="login-card">
         <div className="login-logo">
           <div className="badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" strokeWidth="2">
-              <ellipse cx="12" cy="5" rx="9" ry="3"/>
-              <path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/>
-              <path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6"/>
-            </svg>
+            {logoUrl ? (
+              <img src={logoUrl} alt="PTI Logo" style={{ width: 40, height: 40, objectFit: 'contain' }} />
+            ) : (
+              <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" strokeWidth="2">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                <path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/>
+                <path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6"/>
+              </svg>
+            )}
           </div>
           <h1>PTI Hostel<br/>Defaulters Portal</h1>
           <p>Porter Access Only</p>
