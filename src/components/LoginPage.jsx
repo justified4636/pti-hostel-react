@@ -29,7 +29,7 @@ export default function LoginPage({ logoUrl }) {
             {logoUrl ? (
               <img src={logoUrl} alt="PTI Logo" style={{ width: 40, height: 40, objectFit: 'contain' }} />
             ) : (
-              <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" strokeWidth="2">
+              <svg viewBox="0 0 24 24" fill="none"               stroke="#F5C542" strokeWidth="2">
                 <ellipse cx="12" cy="5" rx="9" ry="3"/>
                 <path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/>
                 <path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6"/>

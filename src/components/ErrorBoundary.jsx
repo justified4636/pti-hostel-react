@@ -14,7 +14,7 @@ export default class ErrorBoundary extends Component {
     if (this.state.hasError) {
       return (
         <div style={{
-          minHeight: '100vh', background: '#0B1F3A', display: 'flex',
+          minHeight: '100vh', background: '#1A4A2E', display: 'flex',
           alignItems: 'center', justifyContent: 'center', padding: 24,
         }}>
           <div style={{
@@ -22,7 +22,7 @@ export default class ErrorBoundary extends Component {
             textAlign: 'center', boxShadow: '0 8px 32px rgba(0,0,0,0.16)',
           }}>
             <div style={{ fontSize: 48, marginBottom: 16 }}>⚠️</div>
-            <h2 style={{ fontFamily: 'Space Grotesk, sans-serif', color: '#0B1F3A', marginBottom: 8 }}>
+            <h2 style={{ fontFamily: 'Space Grotesk, sans-serif', color: '#1A4A2E', marginBottom: 8 }}>
               Something went wrong
             </h2>
             <p style={{ color: '#9AA5B4', fontSize: 14, marginBottom: 24 }}>
@@ -31,7 +31,7 @@ export default class ErrorBoundary extends Component {
             <button
               onClick={() => { this.setState({ hasError: false, error: null }); window.location.reload() }}
               style={{
-                padding: '12px 32px', background: '#0B1F3A', color: 'white',
+                padding: '12px 32px', background: '#2E7D32', color: 'white',
                 border: 'none', borderRadius: 8, fontSize: 14, fontWeight: 600,
                 cursor: 'pointer', fontFamily: 'Inter, sans-serif',
               }}
