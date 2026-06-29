@@ -98,7 +98,7 @@ export default function SearchPanel({ onSelectStudent }) {
                 <thead>
                   <tr>
                     <th>Matric No.</th><th>Full Name</th><th>Programme</th>
-                    <th>Block/Room</th><th>Year</th><th></th>
+                    <th>Block/Room</th><th>Level</th><th></th>
                   </tr>
                 </thead>
                 <tbody>

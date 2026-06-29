@@ -91,7 +91,7 @@ export default function StudentProfile({ studentId, onBack, onAddDefault }) {
         <div className="info-grid">
           <div className="info-item"><label>Block</label><span>{student.hostel_block}</span></div>
           <div className="info-item"><label>Room</label><span>{student.room_number}</span></div>
-          <div className="info-item"><label>Year</label><span>{student.year_of_study}</span></div>
+          <div className="info-item"><label>Level</label><span>{student.year_of_study}</span></div>
         </div>
         <div style={{ padding: '20px 24px' }}>
           <div className="section-title">Default Records</div>

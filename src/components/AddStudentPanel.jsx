@@ -69,7 +69,7 @@ export default function AddStudentPanel() {
             <input className="field-input" value={form.programme} onChange={e => setField('programme', e.target.value)} placeholder="e.g. Petroleum Engineering" />
           </div>
           <div>
-            <label className="field-label">Year of Study *</label>
+            <label className="field-label">Level of Study *</label>
             <select className="field-input" value={form.year} onChange={e => setField('year', e.target.value)}>
               <option value="">Select year</option>
               <option>ND1</option><option>ND2</option>
